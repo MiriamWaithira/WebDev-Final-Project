@@ -1,0 +1,58 @@
+/* General styling for the form container */
+.form-container {
+    background-color: #e8f5e9; /* Light green background */
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the header */
+.form-container h2 {
+    color: #2e7d32; /* Darker green header color */
+    text-align: center;
+}
+
+/* Styling form input fields */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #a5d6a7; /* Light green border */
+    border-radius: 5px;
+    display: block;
+}
+
+/* Styling form submit button */
+.form-container button {
+    background-color: #4caf50; /* Medium green button color */
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #388e3c; /* Darker green for button hover */
+}
+
+/* Styling the login button for already registered users */
+.login-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #2e7d32; /* Darker green for the link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    color: #1b5e20; /* Even darker green for link hover */
+    text-decoration: underline;
+}

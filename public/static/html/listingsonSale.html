@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/static/css/listingsonSale.css">
+    <title>Listings on Sale</title>
+</head>
+<body>
+    <h2>Available Listings</h2>
+    <div id="listingsContainer" class="listings-container"></div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('/api/listings');
+                if (response.ok) {
+                    const listings = await response.json();
+                    const listingsContainer = document.getElementById('listingsContainer');
+
+                    if (listings.length === 0) {
+                        listingsContainer.textContent = 'No listings available.';
+                    } else {
+                        listings.forEach(listing => {
+                            const listingElement = document.createElement('div');
+                            listingElement.classList.add('listing');
+
+                            // Creating listing content
+                            listingElement.innerHTML = `
+                                <h3>${listing.name}</h3>
+                                <p><strong>Description:</strong> ${listing.description}</p>
+                                <p><strong>Cost:</strong> $${listing.cost}</p>
+                                <p><strong>Quantity:</strong> ${listing.quantity}</p>
+                                <p><strong>Contact:</strong> ${listing.contacts}</p>
+                            `;
+
+                            listingsContainer.appendChild(listingElement);
+                        });
+                    }
+                } else {
+                    throw new Error('Error fetching listings.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error loading listings. Please try again later.');
+            }
+        });
+    </script>
+</body>
+</html>

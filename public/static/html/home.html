@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMLINK</title>
+    <link rel="stylesheet" href="/public/static/css/home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">FARMLINK</h1>
+        <ul class="nav-list">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="btn-secondary dropdown">
+                <a href="#" class="login-dropdown">Log In</a>
+                <div class="dropdown-content">
+                    <a href="/Sellerlogin">Log In as Seller</a>
+                    <a href="/Buyerlogin">Log In as Buyer</a>
+                </div>
+            </li>
+            <li class="btn-primary"><a href="/register-seller">Join to Sell</a></li>
+            <li class="btn-primary"><a href="/register-buyer">Join to Buy</a></li>
+        </ul>
+        <img src="/public/images/menu-button.jpg" alt="Menu" class="menu-btn">
+    </nav>
+    
+    <header id="home">
+        <div class="header-content">
+            <h2>Sell or Buy Anything Related to Agriculture</h2>
+            <div class="line"></div>
+            <h1>CONNECTING AGRICULTURE, ONE CLICK AT A TIME!</h1>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </header>
+    
+    <section class="benefits">
+        <div class="title">
+            <h1>Potential Benefits</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="/public/images/buy-produce.jpg" alt="">
+                <h4>Are you looking to Buy?</h4>
+                <p>Get a variety of products and services from our site.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="column">
+                <img src="/public/images/sell-milk.jpg" alt="">
+                <h4>Are you looking to Sell?</h4>
+                <p>Meet your potential buyers from our site.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="title">
+            <h1>About Us</h1>
+            <div class="line"></div>
+            <p>FarmLink is an online platform that connects farmers, sellers, and buyers to promote agribusiness. Our purpose is to facilitate easy access to agricultural products, services, and knowledge to support a thriving agricultural ecosystem.</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="title">
+            <h1>Contact Us</h1>
+            <div class="line"></div>
+            <p>123 Fifth Avenue, NBO 10160, NAIROBI, KENYA</p>
+            <p>Phone: +254701234567</p>
+            <p>Email: contact@gmail.com</p>
+        </div>
+    </section>
+    
+    <section class="footer">
+        <p>123 Fifth Avenue, NBO 10160, NAIROBI, KENYA | Phone: +254701234567 | Email: contact@gmail.com<br>Copyright @ 2024 K Ventures</p>
+    </section>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('.menu-btn');
+        const navlist = document.querySelector('.nav-list');
+        const loginDropdown = document.querySelector('.login-dropdown');
+
+        menuBtn.addEventListener('click', () => {
+            navlist.classList.toggle('mobile-menu');
+            menuBtn.classList.toggle('active'); // Toggle button state
+        });
+
+        loginDropdown.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.classList.toggle('show');
+        });
+    });
+    </script>
+</body>
+</html>
