@@ -17,7 +17,7 @@ Sellers can manage their listings, view their sales history, and track performan
 
 3. Listings Management:
 
-Sellers can create, update, and delete their listings through a dedicated dashboard. Each listing includes details such as product name, description, price, and quantity.
+Sellers can create, update, and view their listings through a dedicated dashboard. Each listing includes details such as product name, description, price, and quantity.
 Buyers can search for products and view listings based on their preferences, making it easy to find what they need.
 
 4. Responsive Design:
@@ -39,6 +39,7 @@ Benefits:
 4. Increased Market Reach: Sellers can reach a broader audience, while buyers have access to a wider range of products, promoting agricultural trade growth.
 
 Technologies and Tools Used:
+    
     1. HTML/CSS: For structuring and styling the web pages, ensuring a responsive and visually appealing design.
 
     2. JavaScript: For client-side functionality, including form validation and dynamic interactions within the application.
